@@ -1,60 +1,27 @@
-# Yerosen Tamrat — Portfolio
+# Yerosen Tamrat Portfolio
 
-Built with **Next.js 14**, **TypeScript**, and **Tailwind CSS**.
+Personal portfolio website built with Next.js, TypeScript, and Tailwind CSS.
+This project highlights my profile, technical skills, projects, education, and contact details in a responsive single-page layout.
 
-## 🚀 Getting Started
+## Live Preview
 
-```bash
-# 1. Install dependencies
-npm install
+Deploy this repository to Vercel (recommended) or any platform that supports Next.js.
 
-# 2. Run the development server
-npm run dev
-```
+## Tech Stack
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+- Next.js 14
+- React 18
+- TypeScript
+- Tailwind CSS
 
-## 📦 Build for Production
+## Features
 
-```bash
-npm run build
-npm start
-```
+- Responsive modern portfolio layout
+- Dedicated sections for About, Skills, Projects, and Education
+- Contact section with social links
+- Downloadable resume from the `public/` directory
+- Lightweight and production-ready Next.js setup
 
-## 🌐 Deploy to Vercel (Recommended)
+## License
 
-1. Push this folder to a GitHub repository
-2. Go to [vercel.com](https://vercel.com) and import your repo
-3. Vercel will auto-detect Next.js and deploy
-
-## 📁 Project Structure
-
-```
-yerosen-portfolio/
-├── app/
-│   ├── layout.tsx       # Root layout + fonts
-│   ├── page.tsx         # Main page
-│   └── globals.css      # Global styles + animations
-├── components/
-│   ├── Cursor.tsx       # Custom cursor
-│   ├── Nav.tsx          # Navigation
-│   ├── Hero.tsx         # Hero section
-│   ├── Ticker.tsx       # Scrolling ticker
-│   ├── About.tsx        # About section
-│   ├── Skills.tsx       # Skills with tab filter
-│   ├── Projects.tsx     # Projects section
-│   ├── Education.tsx    # Education + certificates
-│   ├── Contact.tsx      # Contact section
-│   └── Footer.tsx       # Footer
-├── public/
-│   └── resume.pdf       # Your resume (download button)
-└── tailwind.config.ts
-```
-
-## ✏️ Updating Content
-
-- **GPA / stats** → `components/Hero.tsx`, `components/About.tsx`, `components/Education.tsx`
-- **Projects** → `components/Projects.tsx` (edit the `projects` array)
-- **Skills** → `components/Skills.tsx` (edit the `skills` array)
-- **Social links** → `components/Contact.tsx` (edit the `socials` array)
-- **Resume** → Replace `public/resume.pdf` with your updated resume
+This project is for personal portfolio use.
