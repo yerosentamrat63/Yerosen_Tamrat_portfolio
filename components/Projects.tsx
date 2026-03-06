@@ -3,10 +3,9 @@ const projects = [
     num: "/01",
     name: "Laura",
     status: "COMPLETED",
-    desc: "A free movie streaming site built with vanilla HTML, CSS and JavaScript. Pulls live movie and TV data from the TMDB API — browse trending titles, search by genre or title, and jump straight into streaming. Clean dark UI with a focus on speed and simplicity.",
-    role: "Role: Sole developer — full UI build, TMDB API integration, dynamic content rendering, search functionality, and responsive layout.",
-    tags: ["HTML", "CSS", "JavaScript", "TMDB API", "Streaming", "Responsive Design"],
-    link: "https://github.com/yerosentamrat63/Laura---Free-Movie-Streaming-site",
+    desc: "A full-featured streaming platform with real-time video playback, user authentication, and a content discovery feed. Built with a responsive UI that adapts seamlessly across devices, featuring smooth transitions and a cinema-quality dark interface.",
+    role: "Role: Lead Frontend Developer — UI architecture, video player integration, responsive layout system, and authentication flow.",
+    tags: ["HTML", "CSS", "JavaScript", "Streaming", "UI/UX", "Auth"],
   },
   {
     num: "/02",
@@ -23,6 +22,14 @@ const projects = [
     desc: "A fully responsive online marketplace inspired by Amazon. Features product listings, category-based navigation, cart functionality, and a clean UI built purely with HTML, CSS & JavaScript.",
     role: "Role: Sole developer — UI architecture, product listing structure, category navigation, and frontend state management.",
     tags: ["HTML", "CSS", "JavaScript", "Responsive Design", "UI/UX"],
+  },
+  {
+    num: "/04",
+    name: "Natours Landing Page",
+    status: "COMPLETED",
+    desc: "A responsive single-page travel landing website focused on clean UI composition, animated sections, reusable Sass components, and scalable stylesheet architecture.",
+    role: "Role: Sole frontend developer — implemented semantic HTML structure, Sass 7-1 architecture, BEM-based styling, responsive layout, and CSS build workflow.",
+    tags: ["HTML5", "Sass (SCSS)", "BEM", "Responsive Design", "Landing Page"],
   },
 ];
 
@@ -69,17 +76,6 @@ export default function Projects() {
                 <span key={t} className="font-mono text-[10px] px-[10px] py-1 border border-[rgba(154,212,214,0.18)] text-[#4a5e7a] tracking-[0.06em] uppercase">{t}</span>
               ))}
             </div>
-
-            {"link" in p && p.link && (
-              <a
-                href={p.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-[8px] font-mono text-[10px] text-accent tracking-[0.1em] uppercase border border-[rgba(154,212,214,0.18)] px-[12px] py-[8px] w-fit mt-1 transition-all duration-200 hover:bg-[rgba(154,212,214,0.07)] hover:border-accent"
-              >
-                ↗ VIEW ON GITHUB
-              </a>
-            )}
           </div>
         ))}
       </div>

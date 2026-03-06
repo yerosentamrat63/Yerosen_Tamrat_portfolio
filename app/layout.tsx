@@ -5,7 +5,7 @@ import "./globals.css";
 const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
   variable: "--font-bricolage",
-  weight: ["200", "300", "400", "500", "600", "700", "800"],
+  axes: ["opsz", "wdth"],
 });
 
 const jetbrains = JetBrains_Mono({
