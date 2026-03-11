@@ -66,7 +66,7 @@ export default function Hero() {
               <><Ln n={7}/>&nbsp;&nbsp;<Pr>community</Pr>: <Str>{"'A2SV Member'"}</Str>,</>,
               <><Ln n={8}/>&nbsp;&nbsp;<Pr>focus</Pr>: <Br>[</Br><Str>{"'DSA'"}</Str>, <Str>{"'Web Dev'"}</Str>, <Str>{"'UI/UX'"}</Str><Br>]</Br>,</>,
               <><Ln n={9}/>&nbsp;&nbsp;<Pr>languages</Pr>: <Br>[</Br><Str>{"'HTML'"}</Str>, <Str>{"'CSS'"}</Str>, <Str>{"'JS'"}</Str>, <Str>{"'Python'"}</Str>, <Str>{"'C++'"}</Str><Br>]</Br>,</>,
-              <><Ln n={10}/>&nbsp;&nbsp;<Pr>tools</Pr>: <Str>{"'Git · Figma · Linux'"}</Str>,</>,
+              <><Ln n={10}/>&nbsp;&nbsp;<Pr>tools</Pr>: <Str>{"'Git · Figma · Adobe Illustrator · Linux'"}</Str>,</>,
               <><Ln n={11}/>&nbsp;&nbsp;<Pr>leetcode</Pr>: <Str>{"'100+ solved'"}</Str></>,
               <><Ln n={12}/><Br>{"}"}</Br>;</>,
               <><Ln n={13}/>&nbsp;</>,

@@ -17,6 +17,10 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Yerosen Tamrat | Frontend Developer",
   description: "Frontend Developer & A2SV Member based in Addis Ababa, Ethiopia. Building clean, fast web experiences.",
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

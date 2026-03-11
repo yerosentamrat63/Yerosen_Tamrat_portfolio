@@ -6,6 +6,7 @@ const projects = [
     desc: "A full-featured streaming platform with real-time video playback, user authentication, and a content discovery feed. Built with a responsive UI that adapts seamlessly across devices, featuring smooth transitions and a cinema-quality dark interface.",
     role: "Role: Lead Frontend Developer — UI architecture, video player integration, responsive layout system, and authentication flow.",
     tags: ["HTML", "CSS", "JavaScript", "Streaming", "UI/UX", "Auth"],
+    link: "https://laura-drab.vercel.app/",
   },
   {
     num: "/02",
@@ -30,6 +31,17 @@ const projects = [
     desc: "A responsive single-page travel landing website focused on clean UI composition, animated sections, reusable Sass components, and scalable stylesheet architecture.",
     role: "Role: Sole frontend developer — implemented semantic HTML structure, Sass 7-1 architecture, BEM-based styling, responsive layout, and CSS build workflow.",
     tags: ["HTML5", "Sass (SCSS)", "BEM", "Responsive Design", "Landing Page"],
+  },
+  {
+    num: "/05",
+    name: "AW Coffee Export — Brand Logo Design",
+    status: "COMPLETED",
+    desc: "Designed a clean, scalable logo for AW Coffee Export that blends Ethiopian coffee heritage with a modern visual identity for web, packaging, and global brand use.",
+    role: "Role: Logo Designer — concept development, vector construction, brand identity exploration, and final scalable logo design for digital and print use.",
+    tags: ["Figma", "Adobe Illustrator", "Brand Identity", "Logo Design", "Vector Design"],
+    link: "https://www.awcoffeeexport.com/",
+    highlight: "DESIGN PROJECT",
+    image: "/AW-coffee%20logo%20preview.png",
   },
 ];
 
@@ -56,7 +68,15 @@ export default function Projects() {
             <span className="font-mono text-[11px] text-pur2 tracking-[0.1em]">{p.num}</span>
 
             <div className="flex flex-col gap-2">
-              <h3 className="font-sans text-[26px] font-extrabold tracking-[-0.02em] text-[#f2fdff] leading-tight">{p.name}</h3>
+              <div className="flex items-start justify-between gap-3 flex-wrap">
+                <h3 className="font-sans text-[26px] font-extrabold tracking-[-0.02em] text-[#f2fdff] leading-tight">{p.name}</h3>
+                {"highlight" in p && p.highlight && (
+                  <span className="inline-flex items-center gap-[6px] px-[10px] py-[5px] border border-[rgba(112,96,176,0.45)] bg-[rgba(86,71,135,0.18)] font-mono text-[9px] text-[#dbcbd8] tracking-[0.12em] uppercase whitespace-nowrap">
+                    <span className="text-[#7060b0] text-[8px]">◆</span>
+                    {p.highlight}
+                  </span>
+                )}
+              </div>
               <div className="inline-flex items-center gap-[6px] px-[10px] py-1 bg-[rgba(154,212,214,0.08)] border border-[rgba(154,212,214,0.08)] font-mono text-[10px] text-accent tracking-[0.1em] w-fit">
                 {p.status === "ONGOING" && (
                   <span className="w-[6px] h-[6px] rounded-full bg-accent animate-pulse-dot" />
@@ -75,6 +95,29 @@ export default function Projects() {
               {p.tags.map(t => (
                 <span key={t} className="font-mono text-[10px] px-[10px] py-1 border border-[rgba(154,212,214,0.18)] text-[#4a5e7a] tracking-[0.06em] uppercase">{t}</span>
               ))}
+            </div>
+
+            <div className="flex flex-wrap gap-2 mt-1">
+              {"link" in p && p.link && (
+                <a
+                  href={p.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-[8px] font-mono text-[10px] text-accent tracking-[0.1em] uppercase border border-[rgba(154,212,214,0.18)] px-[12px] py-[8px] w-fit transition-all duration-200 hover:bg-[rgba(154,212,214,0.07)] hover:border-accent"
+                >
+                  ↗ VISIT WEBSITE
+                </a>
+              )}
+              {"image" in p && p.image && (
+                <a
+                  href={p.image}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-[8px] font-mono text-[10px] text-[#dbcbd8] tracking-[0.1em] uppercase border border-[rgba(112,96,176,0.35)] px-[12px] py-[8px] w-fit transition-all duration-200 hover:bg-[rgba(86,71,135,0.12)] hover:border-[#7060b0]"
+                >
+                  ↗ PREVIEW IMAGE
+                </a>
+              )}
             </div>
           </div>
         ))}

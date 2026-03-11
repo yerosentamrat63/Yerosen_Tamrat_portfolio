@@ -13,6 +13,7 @@ const skills: { name: string; cat: Exclude<Cat,"all">; sub: string }[] = [
   { name: "CSS Layouts",        cat: "web",   sub: "Web"        },
   { name: "DOM Manipulation",   cat: "web",   sub: "Web"        },
   { name: "Figma",              cat: "web",   sub: "UI / Design"},
+  { name: "Adobe Illustrator",  cat: "tools", sub: "UI / Design"},
   { name: "Git & GitHub",       cat: "tools", sub: "Tools"      },
   { name: "Linux",              cat: "tools", sub: "Tools"      },
   { name: "VS Code",            cat: "tools", sub: "Tools"      },
