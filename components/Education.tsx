@@ -15,22 +15,43 @@ export default function Education() {
         <p className="sc font-mono text-[11px] text-[#4a5e7a] tracking-[0.12em] mb-3">ACADEMIC BACKGROUND</p>
         <h2 className="font-sans text-[clamp(30px,4vw,52px)] font-extrabold tracking-[-0.02em] text-[#f2fdff] leading-[1.1] mb-8">Education</h2>
 
-        <div className="border border-[rgba(154,212,214,0.08)] bg-bg2 p-9 transition-all duration-250 hover:border-[rgba(154,212,214,0.18)] hover:shadow-[0_8px_40px_rgba(86,71,135,0.15)]">
-          <div className="font-sans text-[22px] font-extrabold text-[#f2fdff] tracking-[-0.02em] mb-[6px]">American College of Technology</div>
-          <div className="font-mono text-[11px] text-accent tracking-[0.08em] uppercase mb-[22px]">BSc in Computer Science</div>
-          <div className="flex flex-col gap-[10px] mb-6">
-            {["Addis Ababa, Ethiopia","Expected Graduation: 2027","Focus: DSA · Web Development · Digital Logic Design · Software Engineering","Transferred from AASTU after first semester"].map(m => (
-              <div key={m} className="flex items-start gap-[10px] font-mono text-[12px] text-[#4a5e7a] leading-[1.5]">
-                <span className="text-accent text-[10px] flex-shrink-0 mt-[1px]">→</span>
-                {m}
-              </div>
-            ))}
+        <div className="flex flex-col gap-5">
+          <div className="border border-[rgba(154,212,214,0.08)] bg-bg2 p-9 transition-all duration-250 hover:border-[rgba(154,212,214,0.18)] hover:shadow-[0_8px_40px_rgba(86,71,135,0.15)]">
+            <div className="font-sans text-[22px] font-extrabold text-[#f2fdff] tracking-[-0.02em] mb-[6px]">American College of Technology</div>
+            <div className="font-mono text-[11px] text-accent tracking-[0.08em] uppercase mb-[22px]">BSc in Computer Science</div>
+            <div className="flex flex-col gap-[10px] mb-6">
+              {["Addis Ababa, Ethiopia","Expected Graduation: 2027","Focus: DSA · Web Development · Digital Logic Design · Software Engineering","Transferred from AASTU after first semester"].map(m => (
+                <div key={m} className="flex items-start gap-[10px] font-mono text-[12px] text-[#4a5e7a] leading-[1.5]">
+                  <span className="text-accent text-[10px] flex-shrink-0 mt-[1px]">→</span>
+                  {m}
+                </div>
+              ))}
+            </div>
+            <div className="inline-flex items-center gap-2 px-5 py-3 bg-[rgba(154,212,214,0.07)] border border-[rgba(154,212,214,0.18)] font-mono text-[14px] font-bold text-accent tracking-[0.05em]">
+              GPA &nbsp;3.93 / 4.0 ↑
+            </div>
           </div>
-          <div className="inline-flex items-center gap-2 px-5 py-3 bg-[rgba(154,212,214,0.07)] border border-[rgba(154,212,214,0.18)] font-mono text-[14px] font-bold text-accent tracking-[0.05em]">
-            GPA &nbsp;3.93 / 4.0 ↑
-          </div>
-          <div className="inline-flex items-center gap-2 mt-[14px] px-[18px] py-[10px] bg-[rgba(86,71,135,0.15)] border border-[rgba(112,96,176,0.4)] font-mono text-[11px] text-[#dbcbd8] tracking-[0.1em] uppercase ml-0 block w-fit">
-            <span className="text-[#7060b0] text-[9px] mr-1">◆</span>A2SV Member — Africa to Silicon Valley
+
+          <div className="border border-[rgba(154,212,214,0.08)] bg-bg2 p-9 transition-all duration-250 hover:border-[rgba(154,212,214,0.18)] hover:shadow-[0_8px_40px_rgba(86,71,135,0.15)]">
+            <div className="font-sans text-[22px] font-extrabold text-[#f2fdff] tracking-[-0.02em] mb-[6px]">A2SV (Africa to Silicon Valley)</div>
+            <div className="font-mono text-[11px] text-accent tracking-[0.08em] uppercase mb-[22px]">Software Engineering Fellowship — G7 Batch</div>
+            <div className="flex flex-col gap-[10px] mb-6">
+              {[
+                "Remote Program",
+                "Intensive training in Data Structures & Algorithms and problem solving",
+                "Daily LeetCode practice and technical interview preparation",
+                "Phase II: Building real-world software products in teams",
+                "Collaboration with top African engineering students",
+              ].map(m => (
+                <div key={m} className="flex items-start gap-[10px] font-mono text-[12px] text-[#4a5e7a] leading-[1.5]">
+                  <span className="text-accent text-[10px] flex-shrink-0 mt-[1px]">→</span>
+                  {m}
+                </div>
+              ))}
+            </div>
+            <div className="inline-flex items-center gap-2 px-[18px] py-[10px] bg-[rgba(86,71,135,0.15)] border border-[rgba(112,96,176,0.4)] font-mono text-[11px] text-[#dbcbd8] tracking-[0.1em] uppercase">
+              <span className="text-[#7060b0] text-[9px] mr-1">◆</span>A2SV Fellow — G7 Batch
+            </div>
           </div>
         </div>
       </div>
