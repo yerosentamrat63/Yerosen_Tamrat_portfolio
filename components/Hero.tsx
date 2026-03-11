@@ -4,50 +4,50 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen grid grid-cols-2 items-center gap-[72px] px-14 pt-[130px] pb-20 overflow-hidden"
+      className="relative grid min-h-screen items-center gap-10 overflow-hidden px-4 pb-16 pt-[110px] sm:px-6 md:grid-cols-2 md:gap-12 md:pt-[130px] md:pb-20 lg:gap-[72px] lg:px-14"
     >
       <div className="grid-bg" />
       {/* glows */}
-      <div className="absolute w-[700px] h-[700px] rounded-full pointer-events-none top-[-120px] right-[-180px]"
+      <div className="pointer-events-none absolute right-[-80px] top-[-80px] h-[340px] w-[340px] rounded-full sm:right-[-120px] sm:top-[-100px] sm:h-[480px] sm:w-[480px] lg:right-[-180px] lg:top-[-120px] lg:h-[700px] lg:w-[700px]"
         style={{ background: "radial-gradient(circle,rgba(86,71,135,.28) 0%,rgba(154,212,214,.04) 40%,transparent 70%)" }} />
-      <div className="absolute w-[420px] h-[420px] rounded-full pointer-events-none bottom-[-40px] left-[-120px]"
+      <div className="pointer-events-none absolute bottom-[-40px] left-[-80px] h-[240px] w-[240px] rounded-full sm:left-[-100px] sm:h-[320px] sm:w-[320px] lg:left-[-120px] lg:h-[420px] lg:w-[420px]"
         style={{ background: "radial-gradient(circle,rgba(154,212,214,.07) 0%,transparent 70%)" }} />
 
       {/* LEFT */}
       <div>
         {/* badge */}
-        <div className="inline-flex items-center gap-2 px-[14px] py-[6px] border border-[rgba(154,212,214,0.18)] bg-[rgba(154,212,214,0.07)] mb-[26px] animate-fade-up">
+        <div className="mb-[22px] inline-flex items-center gap-2 border border-[rgba(154,212,214,0.18)] bg-[rgba(154,212,214,0.07)] px-3 py-[6px] animate-fade-up sm:mb-[26px] sm:px-[14px]">
           <span className="w-[7px] h-[7px] rounded-full bg-accent animate-pulse-dot" />
-          <span className="font-mono text-[10px] text-accent tracking-[0.14em] uppercase">A2SV Member · Open to Opportunities</span>
+          <span className="font-mono text-[9px] text-accent tracking-[0.12em] uppercase sm:text-[10px] sm:tracking-[0.14em]">A2SV Member · Open to Opportunities</span>
         </div>
 
-        <p className="font-mono text-[11px] text-[#dbcbd8] tracking-[0.18em] uppercase mb-[18px] flex items-center gap-[10px] animate-fade-up delay-100 before:content-[''] before:w-7 before:h-px before:bg-[#dbcbd8] before:opacity-50">
+        <p className="mb-4 flex items-center gap-[10px] font-mono text-[10px] uppercase tracking-[0.14em] text-[#dbcbd8] animate-fade-up delay-100 before:h-px before:w-6 before:bg-[#dbcbd8] before:opacity-50 before:content-[''] sm:mb-[18px] sm:text-[11px] sm:tracking-[0.18em] sm:before:w-7">
           Frontend Developer &amp; CS Student
         </p>
 
-        <h1 className="font-sans text-[clamp(44px,5.5vw,76px)] font-extrabold leading-[1.05] tracking-[-0.02em] text-[#f2fdff] mb-[26px] animate-fade-up delay-200">
+        <h1 className="mb-5 font-sans text-[clamp(34px,9vw,76px)] font-extrabold leading-[1.05] tracking-[-0.02em] text-[#f2fdff] animate-fade-up delay-200 sm:mb-[26px]">
           Solving<br />Problems.<br /><span className="text-accent">Shipping Code.</span>
         </h1>
 
-        <p className="font-mono text-[13px] text-[#4a5e7a] leading-[1.8] max-w-[500px] mb-10 animate-fade-up delay-300">
+        <p className="mb-8 max-w-[500px] font-mono text-[12px] leading-[1.8] text-[#4a5e7a] animate-fade-up delay-300 sm:mb-10 sm:text-[13px]">
           CS student and A2SV member building clean, fast web experiences. Obsessed with DSA, UI detail, and writing code that just works. 100+ LeetCode problems solved.
         </p>
 
-        <div className="flex gap-[14px] flex-wrap animate-fade-up delay-400">
-          <a href="#projects" className="inline-flex items-center gap-[10px] px-7 py-[14px] bg-accent text-bg2 font-mono text-[11px] font-bold tracking-[0.1em] uppercase no-underline transition-all duration-200 hover:bg-accent2 hover:-translate-y-[3px] hover:shadow-[0_12px_32px_rgba(154,212,214,0.2)]">
+        <div className="flex flex-wrap gap-3 animate-fade-up delay-400 sm:gap-[14px]">
+          <a href="#projects" className="inline-flex w-full items-center justify-center gap-[10px] bg-accent px-6 py-[13px] font-mono text-[10px] font-bold uppercase tracking-[0.1em] text-bg2 no-underline transition-all duration-200 hover:bg-accent2 hover:-translate-y-[3px] hover:shadow-[0_12px_32px_rgba(154,212,214,0.2)] sm:w-auto sm:px-7 sm:py-[14px] sm:text-[11px]">
             VIEW MY WORK ↓
           </a>
-          <a href={gmailComposeUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-[10px] px-7 py-[14px] bg-transparent text-[#f2fdff] font-mono text-[11px] font-medium tracking-[0.1em] uppercase no-underline border border-[rgba(154,212,214,0.18)] transition-all duration-200 hover:border-[#7060b0] hover:text-[#dbcbd8] hover:-translate-y-[3px]">
+          <a href={gmailComposeUrl} target="_blank" rel="noopener noreferrer" className="inline-flex w-full items-center justify-center gap-[10px] border border-[rgba(154,212,214,0.18)] bg-transparent px-6 py-[13px] font-mono text-[10px] font-medium uppercase tracking-[0.1em] text-[#f2fdff] no-underline transition-all duration-200 hover:border-[#7060b0] hover:text-[#dbcbd8] hover:-translate-y-[3px] sm:w-auto sm:px-7 sm:py-[14px] sm:text-[11px]">
             GET IN TOUCH
           </a>
         </div>
       </div>
 
       {/* RIGHT – code card */}
-      <div className="animate-slide-r">
-        <div className="bg-bg2 border border-[rgba(154,212,214,0.08)] font-mono text-[13px] leading-[1.9] shadow-[0_0_80px_rgba(86,71,135,0.18)]">
+      <div className="w-full animate-slide-r">
+        <div className="mx-auto w-full max-w-[760px] border border-[rgba(154,212,214,0.08)] bg-bg2 font-mono text-[12px] leading-[1.8] shadow-[0_0_80px_rgba(86,71,135,0.18)] sm:text-[13px] sm:leading-[1.9]">
           {/* header */}
-          <div className="flex items-center gap-2 px-[18px] py-3 border-b border-[rgba(154,212,214,0.08)] bg-bg3">
+          <div className="flex items-center gap-2 border-b border-[rgba(154,212,214,0.08)] bg-bg3 px-4 py-3 sm:px-[18px]">
             <span className="w-[10px] h-[10px] rounded-full bg-[#ff5f57]" />
             <span className="w-[10px] h-[10px] rounded-full bg-[#ffbd2e]" />
             <span className="w-[10px] h-[10px] rounded-full bg-[#28ca41]" />
@@ -55,7 +55,7 @@ export default function Hero() {
           </div>
 
           {/* code body */}
-          <div className="px-6 py-[22px]">
+          <div className="overflow-x-auto px-4 py-5 sm:px-6 sm:py-[22px]">
             {[
               <><Ln n={1}/><Cm>// Frontend Developer &amp; A2SV Member</Cm></>,
               <><Ln n={2}/>&nbsp;</>,
@@ -77,9 +77,9 @@ export default function Hero() {
           </div>
 
           {/* stats bar */}
-          <div className="flex border-t border-[rgba(154,212,214,0.08)]">
+          <div className="grid grid-cols-1 border-t border-[rgba(154,212,214,0.08)] sm:grid-cols-3">
             {[["GPA","3.93"],["LeetCode","100+"],["Community","A2SV"]].map(([l,v]) => (
-              <div key={l} className="flex-1 px-4 py-[10px] border-r border-[rgba(154,212,214,0.08)] last:border-r-0 flex flex-col gap-[2px]">
+              <div key={l} className="flex flex-col gap-[2px] border-b border-[rgba(154,212,214,0.08)] px-4 py-[10px] last:border-b-0 sm:border-b-0 sm:border-r sm:last:border-r-0">
                 <span className="text-[9px] tracking-[0.12em] text-[#232e42] uppercase">{l}</span>
                 <span className="text-accent font-medium text-[11px]">{v}</span>
               </div>
@@ -92,7 +92,7 @@ export default function Hero() {
 }
 
 /* mini helpers */
-const Ln = ({ n }: { n: number }) => <span className="text-[#232e42] select-none mr-5 inline-block text-right min-w-[18px]">{n}</span>;
+const Ln = ({ n }: { n: number }) => <span className="mr-4 inline-block min-w-[18px] select-none text-right text-[#232e42] sm:mr-5">{n}</span>;
 const Kw = ({ children }: { children: React.ReactNode }) => <span style={{ color: "#c4a8e8" }}>{children} </span>;
 const Fn = ({ children }: { children: React.ReactNode }) => <span className="text-accent">{children}</span>;
 const Str = ({ children }: { children: React.ReactNode }) => <span style={{ color: "#a8d8a8" }}>{children}</span>;

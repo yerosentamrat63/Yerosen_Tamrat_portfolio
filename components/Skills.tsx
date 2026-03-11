@@ -34,21 +34,21 @@ export default function Skills() {
   const visible = skills.filter(s => active === "all" || s.cat === active);
 
   return (
-    <section id="skills" className="relative px-14 py-[120px] border-t border-[rgba(154,212,214,0.08)]">
+    <section id="skills" className="relative border-t border-[rgba(154,212,214,0.08)] px-4 py-20 sm:px-6 md:py-[120px] lg:px-14">
       <div className="grid-bg" />
 
       {/* header */}
-      <div className="flex justify-between items-end mb-[52px] flex-wrap gap-7 animate-fade-up">
+      <div className="mb-10 flex flex-wrap items-end justify-between gap-6 animate-fade-up sm:mb-[52px] sm:gap-7">
         <div>
-          <p className="sc font-mono text-[11px] text-[#4a5e7a] tracking-[0.12em] mb-3">TECHNICAL ARSENAL</p>
+          <p className="sc mb-2 font-mono text-[10px] tracking-[0.11em] text-[#4a5e7a] sm:mb-3 sm:text-[11px] sm:tracking-[0.12em]">TECHNICAL ARSENAL</p>
           <h2 className="font-sans text-[clamp(30px,4vw,52px)] font-extrabold tracking-[-0.02em] text-[#f2fdff] leading-[1.1]">Skills &amp; Tools</h2>
         </div>
-        <div className="flex border border-[rgba(154,212,214,0.08)] overflow-hidden">
+        <div className="flex flex-wrap border border-[rgba(154,212,214,0.08)]">
           {tabs.map(t => (
             <button
               key={t.value}
               onClick={() => setActive(t.value)}
-              className={`px-[18px] py-[10px] font-mono text-[10px] font-semibold tracking-[0.1em] uppercase border-r border-[rgba(154,212,214,0.08)] last:border-r-0 transition-colors duration-200 ${active === t.value ? "bg-accent text-bg2" : "bg-transparent text-[#4a5e7a] hover:bg-bg4 hover:text-[#f2fdff]"}`}
+              className={`border-r border-t border-[rgba(154,212,214,0.08)] px-4 py-[9px] font-mono text-[9px] font-semibold uppercase tracking-[0.08em] transition-colors duration-200 first:border-t-0 last:border-r-0 sm:border-t-0 sm:px-[18px] sm:py-[10px] sm:text-[10px] sm:tracking-[0.1em] ${active === t.value ? "bg-accent text-bg2" : "bg-transparent text-[#4a5e7a] hover:bg-bg4 hover:text-[#f2fdff]"}`}
             >
               {t.label}
             </button>
@@ -57,14 +57,14 @@ export default function Skills() {
       </div>
 
       {/* grid */}
-      <div className="grid gap-3" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(165px, 1fr))" }}>
+      <div className="grid gap-3" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(145px, 1fr))" }}>
         {visible.map((s, i) => (
           <div
             key={s.name + i}
-            className="border border-[rgba(154,212,214,0.08)] px-[18px] py-[22px] bg-bg2 flex flex-col gap-2 transition-all duration-250 hover:border-accent hover:bg-[rgba(154,212,214,0.06)] hover:-translate-y-[5px] hover:shadow-[0_8px_24px_rgba(154,212,214,0.1)] animate-fade-up"
+            className="flex flex-col gap-2 border border-[rgba(154,212,214,0.08)] bg-bg2 px-4 py-5 transition-all duration-250 hover:-translate-y-[5px] hover:border-accent hover:bg-[rgba(154,212,214,0.06)] hover:shadow-[0_8px_24px_rgba(154,212,214,0.1)] animate-fade-up sm:px-[18px] sm:py-[22px]"
             style={{ animationDelay: `${i * 0.04}s` }}
           >
-            <span className="font-sans text-[15px] font-bold text-[#f2fdff]">{s.name}</span>
+            <span className="font-sans text-[14px] font-bold text-[#f2fdff] sm:text-[15px]">{s.name}</span>
             <span className="font-mono text-[10px] text-accent tracking-[0.1em] uppercase">{s.sub}</span>
           </div>
         ))}

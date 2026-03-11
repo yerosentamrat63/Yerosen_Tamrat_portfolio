@@ -1,11 +1,23 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Cursor() {
   const curRef  = useRef<HTMLDivElement>(null);
   const ringRef = useRef<HTMLDivElement>(null);
+  const [enabled, setEnabled] = useState(false);
 
   useEffect(() => {
+    const isTouchDevice =
+      window.matchMedia("(hover: none), (pointer: coarse)").matches ||
+      "ontouchstart" in window;
+
+    if (isTouchDevice) {
+      setEnabled(false);
+      return;
+    }
+
+    setEnabled(true);
+
     let mx = 0, my = 0, rx = 0, ry = 0;
     const onMove = (e: MouseEvent) => { mx = e.clientX; my = e.clientY; };
     document.addEventListener("mousemove", onMove);
@@ -27,18 +39,27 @@ export default function Cursor() {
     raf = requestAnimationFrame(tick);
 
     const grow = () => {
-      curRef.current!.style.width  = "18px";
-      curRef.current!.style.height = "18px";
-      ringRef.current!.style.width  = "52px";
-      ringRef.current!.style.height = "52px";
+      if (curRef.current) {
+        curRef.current.style.width = "18px";
+        curRef.current.style.height = "18px";
+      }
+      if (ringRef.current) {
+        ringRef.current.style.width = "52px";
+        ringRef.current.style.height = "52px";
+      }
     };
     const shrink = () => {
-      curRef.current!.style.width  = "10px";
-      curRef.current!.style.height = "10px";
-      ringRef.current!.style.width  = "36px";
-      ringRef.current!.style.height = "36px";
+      if (curRef.current) {
+        curRef.current.style.width = "10px";
+        curRef.current.style.height = "10px";
+      }
+      if (ringRef.current) {
+        ringRef.current.style.width = "36px";
+        ringRef.current.style.height = "36px";
+      }
     };
-    document.querySelectorAll("a,button").forEach(el => {
+    const interactiveEls = document.querySelectorAll("a,button");
+    interactiveEls.forEach(el => {
       el.addEventListener("mouseenter", grow);
       el.addEventListener("mouseleave", shrink);
     });
@@ -46,8 +67,14 @@ export default function Cursor() {
     return () => {
       document.removeEventListener("mousemove", onMove);
       cancelAnimationFrame(raf);
+      interactiveEls.forEach(el => {
+        el.removeEventListener("mouseenter", grow);
+        el.removeEventListener("mouseleave", shrink);
+      });
     };
   }, []);
+
+  if (!enabled) return null;
 
   return (
     <>

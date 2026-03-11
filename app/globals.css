@@ -11,6 +11,12 @@
 
 html { scroll-behavior: smooth; }
 
+section[id] { scroll-margin-top: 92px; }
+
+@media (hover: none), (pointer: coarse) {
+  * { cursor: auto !important; }
+}
+
 body {
   background: #03050d;
   color: #f2fdff;
