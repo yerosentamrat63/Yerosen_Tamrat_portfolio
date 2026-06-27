@@ -1,4 +1,4 @@
-const items = ["HTML","CSS","JavaScript","Python","C++","Responsive Design","Git & GitHub","Figma","DSA & Algorithms","A2SV Member","100+ LeetCode","Linux"];
+const items = ["HTML","CSS","JavaScript","Python","C++","Responsive Design","Git & GitHub","Figma","DSA & Algorithms","A2SV Member","200+ LeetCode","Linux"];
 
 export default function Ticker() {
   const doubled = [...items, ...items];

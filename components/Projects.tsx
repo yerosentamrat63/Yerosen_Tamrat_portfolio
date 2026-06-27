@@ -7,33 +7,29 @@ const projects = [
     role: "Role: Lead Frontend Developer — UI architecture, video player integration, responsive layout system, and authentication flow.",
     tags: ["HTML", "CSS", "JavaScript", "Streaming", "UI/UX", "Auth"],
     link: "https://laura-drab.vercel.app/",
+    github: "https://github.com/yerosentamrat63/Laura---Free-Movie-Streaming-site",
   },
   {
     num: "/02",
-    name: "AI Pushup Fitness App",
-    status: "ONGOING",
-    desc: "An AI-powered mobile fitness app that uses the phone camera for real-time posture detection during pushup exercises. Built collaboratively with a small cross-functional team.",
-    role: "Role: React Native Integration & App Glue — connecting components and architecting the camera API integration workflow.",
-    tags: ["React Native", "AI / Pose Detection", "Camera API", "Mobile", "Team Project"],
+    name: "Telegram Agent",
+    status: "COMPLETED",
+    desc: "A personal Telegram AI agent that summarizes group chats and channels, powered by Groq LLMs. Runs as a single-user bot connected to your own Telegram account via Telethon with natural language command parsing.",
+    role: "Role: Sole developer — built full agent with Telethon integration, Groq LLM summarization pipeline, natural language intent parser, and Render deployment.",
+    tags: ["Python", "Telegram API", "Groq", "AI / LLM", "Automation", "Deployment"],
+    link: "https://github.com/yerosentamrat63/telegram-agent",
+    github: "https://github.com/yerosentamrat63/telegram-agent",
   },
   {
     num: "/03",
-    name: "E-commerce Marketplace",
-    status: "ONGOING",
-    desc: "A fully responsive online marketplace inspired by Amazon. Features product listings, category-based navigation, cart functionality, and a clean UI built purely with HTML, CSS & JavaScript.",
-    role: "Role: Sole developer — UI architecture, product listing structure, category navigation, and frontend state management.",
-    tags: ["HTML", "CSS", "JavaScript", "Responsive Design", "UI/UX"],
-  },
-  {
-    num: "/04",
     name: "Natours Landing Page",
     status: "COMPLETED",
     desc: "A responsive single-page travel landing website focused on clean UI composition, animated sections, reusable Sass components, and scalable stylesheet architecture.",
     role: "Role: Sole frontend developer — implemented semantic HTML structure, Sass 7-1 architecture, BEM-based styling, responsive layout, and CSS build workflow.",
     tags: ["HTML5", "Sass (SCSS)", "BEM", "Responsive Design", "Landing Page"],
+    github: "https://github.com/yerosentamrat63/natours-sass-project",
   },
   {
-    num: "/05",
+    num: "/04",
     name: "AW Coffee Export — Brand Logo Design",
     status: "COMPLETED",
     desc: "Designed a clean, scalable logo for AW Coffee Export that blends Ethiopian coffee heritage with a modern visual identity for web, packaging, and global brand use.",
@@ -106,6 +102,16 @@ export default function Projects() {
                   className="inline-flex items-center gap-[8px] font-mono text-[10px] text-accent tracking-[0.1em] uppercase border border-[rgba(154,212,214,0.18)] px-[12px] py-[8px] w-fit transition-all duration-200 hover:bg-[rgba(154,212,214,0.07)] hover:border-accent"
                 >
                   ↗ VISIT WEBSITE
+                </a>
+              )}
+              {"github" in p && p.github && (
+                <a
+                  href={p.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-[8px] font-mono text-[10px] text-[#dbcbd8] tracking-[0.1em] uppercase border border-[rgba(112,96,176,0.35)] px-[12px] py-[8px] w-fit transition-all duration-200 hover:bg-[rgba(86,71,135,0.12)] hover:border-[#7060b0]"
+                >
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
                 </a>
               )}
               {"image" in p && p.image && (

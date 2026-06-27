@@ -30,7 +30,7 @@ export default function Hero() {
         </h1>
 
         <p className="mb-8 max-w-[500px] font-mono text-[12px] leading-[1.8] text-[#4a5e7a] animate-fade-up delay-300 sm:mb-10 sm:text-[13px]">
-          CS student and A2SV member building clean, fast web experiences. Obsessed with DSA, UI detail, and writing code that just works. 100+ LeetCode problems solved.
+          CS student and A2SV member building clean, fast web experiences. Obsessed with DSA, UI detail, and writing code that just works.           200+ LeetCode problems solved.
         </p>
 
         <div className="flex flex-wrap gap-3 animate-fade-up delay-400 sm:gap-[14px]">
@@ -67,7 +67,7 @@ export default function Hero() {
               <><Ln n={8}/>&nbsp;&nbsp;<Pr>focus</Pr>: <Br>[</Br><Str>{"'DSA'"}</Str>, <Str>{"'Web Dev'"}</Str>, <Str>{"'UI/UX'"}</Str><Br>]</Br>,</>,
               <><Ln n={9}/>&nbsp;&nbsp;<Pr>languages</Pr>: <Br>[</Br><Str>{"'HTML'"}</Str>, <Str>{"'CSS'"}</Str>, <Str>{"'JS'"}</Str>, <Str>{"'Python'"}</Str>, <Str>{"'C++'"}</Str><Br>]</Br>,</>,
               <><Ln n={10}/>&nbsp;&nbsp;<Pr>tools</Pr>: <Str>{"'Git · Figma · Adobe Illustrator · Linux'"}</Str>,</>,
-              <><Ln n={11}/>&nbsp;&nbsp;<Pr>leetcode</Pr>: <Str>{"'100+ solved'"}</Str></>,
+              <><Ln n={11}/>&nbsp;&nbsp;<Pr>leetcode</Pr>: <Str>{"'200+ solved'"}</Str></>,
               <><Ln n={12}/><Br>{"}"}</Br>;</>,
               <><Ln n={13}/>&nbsp;</>,
               <><Ln n={14}/><span className="inline-block w-2 h-[15px] bg-accent align-bottom animate-blink" /></>,
@@ -78,7 +78,7 @@ export default function Hero() {
 
           {/* stats bar */}
           <div className="grid grid-cols-1 border-t border-[rgba(154,212,214,0.08)] sm:grid-cols-3">
-            {[["GPA","3.93"],["LeetCode","100+"],["Community","A2SV"]].map(([l,v]) => (
+            {[["GPA","3.93"],["LeetCode","200+"],["Community","A2SV"]].map(([l,v]) => (
               <div key={l} className="flex flex-col gap-[2px] border-b border-[rgba(154,212,214,0.08)] px-4 py-[10px] last:border-b-0 sm:border-b-0 sm:border-r sm:last:border-r-0">
                 <span className="text-[9px] tracking-[0.12em] text-[#232e42] uppercase">{l}</span>
                 <span className="text-accent font-medium text-[11px]">{v}</span>

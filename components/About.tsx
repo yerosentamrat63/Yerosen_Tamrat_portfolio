@@ -1,5 +1,5 @@
 const stats = [
-  { num: "100+", label: "LeetCode Problems" },
+  { num: "200+", label: "LeetCode Problems" },
   { num: "3.93", label: "Current GPA" },
   { num: "3+",   label: "Projects Shipped" },
   { num: "A2SV", label: "Community Member" },
