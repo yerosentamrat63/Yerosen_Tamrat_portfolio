@@ -3,6 +3,7 @@ const certs = [
   { num: "02", name: "CS50: Introduction to Computer Science",               provider: "Harvard University", done: false },
   { num: "03", name: "Full Stack Web Development Path",                       provider: "The Odin Project",  done: false },
   { num: "04", name: "Agentic AI Development",                                provider: "ReadyTensor",       done: false },
+  { num: "05", name: "Wellness Hackathon 2026",                                provider: "ALX",               done: true  },
 ];
 
 export default function Education() {
