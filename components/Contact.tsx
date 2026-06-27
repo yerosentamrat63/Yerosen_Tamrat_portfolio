@@ -49,7 +49,7 @@ export default function Contact() {
             SEND EMAIL ↗
           </a>
           <a
-            href="https://drive.google.com/file/d/1_Ij7ORxW9osA7jhCAwSsTIfk3ieJgtm6/view?usp=sharing"
+            href="https://drive.google.com/file/d/144pmUdaI1s04o4XJhjBKXK4zeaGera5y/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex w-full items-center justify-center gap-[10px] border border-[rgba(154,212,214,0.18)] bg-transparent px-6 py-[13px] font-mono text-[10px] font-medium uppercase tracking-[0.1em] text-[#f2fdff] no-underline transition-all duration-200 hover:border-[#7060b0] hover:text-[#dbcbd8] hover:-translate-y-[3px] sm:w-auto sm:px-7 sm:py-[14px] sm:text-[11px]"
