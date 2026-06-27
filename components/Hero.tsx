@@ -51,24 +51,24 @@ export default function Hero() {
             <span className="w-[10px] h-[10px] rounded-full bg-[#ff5f57]" />
             <span className="w-[10px] h-[10px] rounded-full bg-[#ffbd2e]" />
             <span className="w-[10px] h-[10px] rounded-full bg-[#28ca41]" />
-            <span className="font-mono text-[11px] text-[#4a5e7a] ml-auto tracking-[0.05em]">yerosen.ts</span>
+            <span className="font-mono text-[11px] text-[#4a5e7a] ml-auto tracking-[0.05em]">yerosen.py</span>
           </div>
 
           {/* code body */}
           <div className="overflow-x-auto px-4 py-5 sm:px-6 sm:py-[22px]">
             {[
-              <><Ln n={1}/><Cm>// Frontend Developer &amp; A2SV Member</Cm></>,
+              <><Ln n={1}/><Cm># Frontend Developer &amp; A2SV Member</Cm></>,
               <><Ln n={2}/>&nbsp;</>,
-              <><Ln n={3}/><Kw>const</Kw> <Fn>engineer</Fn> <Br>=</Br> <Br>{"{"}</Br></>,
-              <><Ln n={4}/>&nbsp;&nbsp;<Pr>name</Pr>: <Str>{"'Yerosen Tamrat'"}</Str>,</>,
-              <><Ln n={5}/>&nbsp;&nbsp;<Pr>location</Pr>: <Str>{"'Addis Ababa, ET'"}</Str>,</>,
-              <><Ln n={6}/>&nbsp;&nbsp;<Pr>gpa</Pr>: <Str>{"'3.93 / 4.0'"}</Str>,</>,
-              <><Ln n={7}/>&nbsp;&nbsp;<Pr>community</Pr>: <Str>{"'A2SV Member'"}</Str>,</>,
-              <><Ln n={8}/>&nbsp;&nbsp;<Pr>focus</Pr>: <Br>[</Br><Str>{"'DSA'"}</Str>, <Str>{"'Web Dev'"}</Str>, <Str>{"'UI/UX'"}</Str><Br>]</Br>,</>,
-              <><Ln n={9}/>&nbsp;&nbsp;<Pr>languages</Pr>: <Br>[</Br><Str>{"'HTML'"}</Str>, <Str>{"'CSS'"}</Str>, <Str>{"'JS'"}</Str>, <Str>{"'Python'"}</Str>, <Str>{"'C++'"}</Str><Br>]</Br>,</>,
-              <><Ln n={10}/>&nbsp;&nbsp;<Pr>tools</Pr>: <Str>{"'Git · Figma · Adobe Illustrator · Linux'"}</Str>,</>,
-              <><Ln n={11}/>&nbsp;&nbsp;<Pr>leetcode</Pr>: <Str>{"'200+ solved'"}</Str></>,
-              <><Ln n={12}/><Br>{"}"}</Br>;</>,
+              <><Ln n={3}/><Fn>engineer</Fn> <Br>=</Br> <Br>{"{"}</Br></>,
+<><Ln n={4}/>&nbsp;&nbsp;<Pr>{"\"name\""}</Pr>: <Str>{"'Yerosen Tamrat'"}</Str>,</>,
+<><Ln n={5}/>&nbsp;&nbsp;<Pr>{"\"location\""}</Pr>: <Str>{"'Addis Ababa, ET'"}</Str>,</>,
+<><Ln n={6}/>&nbsp;&nbsp;<Pr>{"\"gpa\""}</Pr>: <Str>{"'3.93 / 4.0'"}</Str>,</>,
+<><Ln n={7}/>&nbsp;&nbsp;<Pr>{"\"community\""}</Pr>: <Str>{"'A2SV Member'"}</Str>,</>,
+<><Ln n={8}/>&nbsp;&nbsp;<Pr>{"\"focus\""}</Pr>: <Br>[</Br><Str>{"'DSA'"}</Str>, <Str>{"'Web Dev'"}</Str>, <Str>{"'UI/UX'"}</Str><Br>]</Br>,</>,
+<><Ln n={9}/>&nbsp;&nbsp;<Pr>{"\"languages\""}</Pr>: <Br>[</Br><Str>{"'HTML'"}</Str>, <Str>{"'CSS'"}</Str>, <Str>{"'JS'"}</Str>, <Str>{"'Python'"}</Str>, <Str>{"'C++'"}</Str><Br>]</Br>,</>,
+<><Ln n={10}/>&nbsp;&nbsp;<Pr>{"\"tools\""}</Pr>: <Str>{"'Git · Figma · Adobe Illustrator · Linux'"}</Str>,</>,
+<><Ln n={11}/>&nbsp;&nbsp;<Pr>{"\"leetcode\""}</Pr>: <Str>{"'200+ solved'"}</Str></>,
+<><Ln n={12}/><Br>{"}"}</Br></>,
               <><Ln n={13}/>&nbsp;</>,
               <><Ln n={14}/><span className="inline-block w-2 h-[15px] bg-accent align-bottom animate-blink" /></>,
             ].map((row, i) => (

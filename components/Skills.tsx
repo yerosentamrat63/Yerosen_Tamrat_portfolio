@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-type Cat = "all" | "lang" | "web" | "tools";
+type Cat = "all" | "lang" | "web" | "tools" | "core";
 
 const skills: { name: string; cat: Exclude<Cat,"all">; sub: string }[] = [
   { name: "HTML",               cat: "lang",  sub: "Language"   },
@@ -9,6 +9,8 @@ const skills: { name: string; cat: Exclude<Cat,"all">; sub: string }[] = [
   { name: "JavaScript",         cat: "lang",  sub: "Language"   },
   { name: "Python",             cat: "lang",  sub: "Language"   },
   { name: "C++",                cat: "lang",  sub: "Language"   },
+  { name: "Java",               cat: "lang",  sub: "Language"   },
+  { name: "SQL",                cat: "lang",  sub: "Language"   },
   { name: "Responsive Design",  cat: "web",   sub: "Web"        },
   { name: "CSS Layouts",        cat: "web",   sub: "Web"        },
   { name: "DOM Manipulation",   cat: "web",   sub: "Web"        },
@@ -17,9 +19,9 @@ const skills: { name: string; cat: Exclude<Cat,"all">; sub: string }[] = [
   { name: "Git & GitHub",       cat: "tools", sub: "Tools"      },
   { name: "Linux",              cat: "tools", sub: "Tools"      },
   { name: "VS Code",            cat: "tools", sub: "Tools"      },
-  { name: "DSA / Algorithms",   cat: "tools", sub: "Core Area"  },
-  { name: "Problem Solving",    cat: "tools", sub: "Core Area"  },
-  { name: "Team Collaboration", cat: "tools", sub: "Core Area"  },
+  { name: "DSA / Algorithms",   cat: "core", sub: "Core Area"  },
+  { name: "Problem Solving",    cat: "core", sub: "Core Area"  },
+  { name: "Team Collaboration", cat: "core", sub: "Core Area"  },
 ];
 
 const tabs: { label: string; value: Cat }[] = [
@@ -27,6 +29,7 @@ const tabs: { label: string; value: Cat }[] = [
   { label: "LANGUAGES", value: "lang"  },
   { label: "WEB",       value: "web"   },
   { label: "TOOLS",     value: "tools" },
+  { label: "CORE",      value: "core"  },
 ];
 
 export default function Skills() {
