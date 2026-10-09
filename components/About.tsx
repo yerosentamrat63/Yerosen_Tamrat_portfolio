@@ -1,3 +1,8 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { revealProps } from "@/lib/reveal";
+
 const stats = [
   { num: "200+", label: "LeetCode Problems" },
   { num: "3.93", label: "Current GPA" },
@@ -11,7 +16,7 @@ export default function About() {
       <div className="grid-bg" />
 
       {/* LEFT */}
-      <div className="animate-fade-up">
+      <motion.div {...revealProps()}>
         <p className="sc mb-4 font-mono text-[10px] tracking-[0.11em] text-[#4a5e7a] sm:mb-[18px] sm:text-[11px] sm:tracking-[0.12em]">WHO I AM</p>
         <div className="mb-7 font-sans text-[clamp(24px,6.5vw,40px)] font-bold leading-[1.25] tracking-[-0.02em] text-[#f2fdff] sm:mb-9 sm:leading-[1.3]">
           Crafting the web<br />with <em className="text-accent not-italic">clean code</em><br />&amp; <em className="text-accent not-italic">sharp logic.</em>
@@ -24,17 +29,17 @@ export default function About() {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
 
       {/* RIGHT */}
-      <div className="animate-fade-up delay-100">
+      <motion.div {...revealProps(0.1)}>
         <p className="sc mb-4 font-mono text-[10px] tracking-[0.11em] text-[#4a5e7a] sm:mb-[18px] sm:text-[11px] sm:tracking-[0.12em]">MY STORY</p>
         <div className="space-y-4 font-mono text-[12px] leading-[1.8] text-[#4a5e7a] sm:space-y-[18px] sm:text-[13px] sm:leading-[1.9]">
           <p>I&apos;m a Computer Science student at the American College of Technology in Addis Ababa, passionate about building clean, well-crafted web interfaces and solving hard problems through code.</p>
           <p>During an intensive summer session I dove deep into Data Structures and Algorithms, solving over 100 problems on LeetCode under guided instruction. That discipline now shapes how I approach every engineering challenge.</p>
           <p>As an A2SV member I sharpen my problem-solving and collaboration skills alongside a community of Africa&apos;s top engineers — working toward software that creates real, lasting impact.</p>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

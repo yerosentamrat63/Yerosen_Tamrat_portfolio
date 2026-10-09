@@ -1,3 +1,8 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { revealProps } from "@/lib/reveal";
+
 const socials = [
   { label: "GitHub",     href: "https://github.com/yerosentamrat63"                          },
   { label: "LinkedIn",   href: "https://www.linkedin.com/in/yerosen-tamrat-a294a3396/"       },
@@ -14,19 +19,19 @@ export default function Contact() {
       <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at center,rgba(86,71,135,0.18) 0%,transparent 65%)" }} />
       <div className="grid-bg" />
 
-      <div className="relative z-10 mx-auto max-w-[700px]">
-        <p className="sc mb-5 font-mono text-[10px] uppercase tracking-[0.16em] text-accent animate-fade-up sm:mb-6 sm:text-[11px] sm:tracking-[0.2em]">READY TO BUILD?</p>
+      <motion.div {...revealProps()} className="relative z-10 mx-auto max-w-[700px]">
+        <p className="sc mb-5 font-mono text-[10px] uppercase tracking-[0.16em] text-accent sm:mb-6 sm:text-[11px] sm:tracking-[0.2em]">READY TO BUILD?</p>
 
-        <h2 className="font-sans text-[clamp(36px,5vw,66px)] font-extrabold tracking-[-0.02em] text-[#f2fdff] leading-[1.05] mb-5 animate-fade-up delay-100">
+        <h2 className="font-sans text-[clamp(36px,5vw,66px)] font-extrabold tracking-[-0.02em] text-[#f2fdff] leading-[1.05] mb-5">
           Let&apos;s engineer<br />something great.
         </h2>
 
-        <p className="mb-9 font-mono text-[12px] leading-[1.8] text-[#4a5e7a] animate-fade-up delay-200 sm:mb-11 sm:text-[13px]">
+        <p className="mb-9 font-mono text-[12px] leading-[1.8] text-[#4a5e7a] sm:mb-11 sm:text-[13px]">
           Frontend developer and A2SV member open to internships, collaborative projects, and meaningful opportunities. Let&apos;s build something impactful together.
         </p>
 
         {/* contact info bar */}
-        <div className="mx-auto mb-10 flex w-full max-w-[700px] flex-col overflow-hidden border border-[rgba(154,212,214,0.08)] animate-fade-up delay-200 md:w-fit md:max-w-none md:flex-row">
+        <div className="mx-auto mb-10 flex w-full max-w-[700px] flex-col overflow-hidden border border-[rgba(154,212,214,0.08)] md:w-fit md:max-w-none md:flex-row">
           <a href="mailto:yerosentamrat4545@gmail.com" className="flex items-center gap-[10px] break-all border-b border-[rgba(154,212,214,0.08)] px-4 py-3 font-mono text-[10px] text-[#4a5e7a] no-underline transition-colors duration-200 hover:bg-[rgba(154,212,214,0.07)] hover:text-accent sm:px-6 sm:text-[11px] md:border-b-0 md:border-r">
             <span className="text-accent text-[13px]">✉</span> yerosentamrat4545@gmail.com
           </a>
@@ -39,7 +44,7 @@ export default function Contact() {
         </div>
 
         {/* buttons */}
-        <div className="mb-12 flex flex-wrap justify-center gap-3 animate-fade-up delay-300 sm:gap-4">
+        <div className="mb-12 flex flex-wrap justify-center gap-3 sm:gap-4">
           <a
             href={gmailComposeUrl}
             target="_blank"
@@ -59,7 +64,7 @@ export default function Contact() {
         </div>
 
         {/* socials */}
-        <div className="flex gap-[10px] justify-center flex-wrap animate-fade-up delay-400">
+        <div className="flex gap-[10px] justify-center flex-wrap">
           {socials.map(s => (
             <a
               key={s.label}
@@ -72,7 +77,7 @@ export default function Contact() {
             </a>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

@@ -1,3 +1,8 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { revealProps } from "@/lib/reveal";
+
 const certs = [
   { num: "01", name: "Advanced CSS and Sass: Flexbox, Grid and Animations", provider: "Udemy",            done: true  },
   { num: "02", name: "CS50: Introduction to Computer Science",               provider: "Harvard University", done: false },
@@ -12,7 +17,7 @@ export default function Education() {
       <div className="grid-bg" />
 
       {/* Education */}
-      <div className="animate-fade-up">
+      <motion.div {...revealProps()}>
         <p className="sc mb-2 font-mono text-[10px] tracking-[0.11em] text-[#4a5e7a] sm:mb-3 sm:text-[11px] sm:tracking-[0.12em]">ACADEMIC BACKGROUND</p>
         <h2 className="mb-7 font-sans text-[clamp(30px,4vw,52px)] font-extrabold leading-[1.1] tracking-[-0.02em] text-[#f2fdff] sm:mb-8">Education</h2>
 
@@ -55,19 +60,20 @@ export default function Education() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Certs */}
-      <div className="animate-fade-up delay-100">
+      <motion.div {...revealProps(0.1)}>
         <p className="sc mb-2 font-mono text-[10px] tracking-[0.11em] text-[#4a5e7a] sm:mb-3 sm:text-[11px] sm:tracking-[0.12em]">SELF-DIRECTED LEARNING</p>
         <h2 className="mb-7 font-sans text-[clamp(30px,4vw,52px)] font-extrabold leading-[1.1] tracking-[-0.02em] text-[#f2fdff] sm:mb-8">Certificates</h2>
 
         <div className="flex flex-col gap-[14px]">
           {certs.map((c, i) => (
-            <div
+            <motion.div
               key={c.num}
-              className="flex items-start gap-3 border border-[rgba(154,212,214,0.08)] bg-bg2 px-4 py-4 transition-all duration-200 hover:translate-x-[6px] hover:border-[#7060b0] hover:bg-[rgba(86,71,135,0.1)] animate-fade-up sm:gap-4 sm:px-[22px] sm:py-5"
-              style={{ animationDelay: `${i * 0.06}s` }}
+              {...revealProps(i * 0.055)}
+              whileHover={{ x: 6 }}
+              className="flex items-start gap-3 border border-[rgba(154,212,214,0.08)] bg-bg2 px-4 py-4 transition-all duration-200 hover:border-[#7060b0] hover:bg-[rgba(86,71,135,0.1)] sm:gap-4 sm:px-[22px] sm:py-5"
             >
               <span className="font-mono text-[11px] text-[#7060b0] flex-shrink-0 mt-[2px]">{c.num}</span>
               <div className="flex-1">
@@ -77,10 +83,10 @@ export default function Education() {
               <span className={`font-mono text-[9px] px-[9px] py-1 border tracking-[0.08em] uppercase flex-shrink-0 mt-[2px] ${c.done ? "border-[rgba(86,71,135,0.5)] text-[#dbcbd8] bg-[rgba(86,71,135,0.12)]" : "border-[rgba(154,212,214,0.4)] text-accent bg-[rgba(154,212,214,0.07)]"}`}>
                 {c.done ? "Completed" : "Ongoing"}
               </span>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

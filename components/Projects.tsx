@@ -1,3 +1,8 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { revealProps } from "@/lib/reveal";
+
 const projects = [
   {
     num: "/01",
@@ -46,17 +51,18 @@ export default function Projects() {
     <section id="projects" className="relative border-t border-[rgba(154,212,214,0.08)] px-4 py-20 sm:px-6 md:py-[120px] lg:px-14">
       <div className="grid-bg" />
 
-      <div className="mb-10 animate-fade-up sm:mb-[52px]">
+      <motion.div {...revealProps()} className="mb-10 sm:mb-[52px]">
         <p className="sc mb-2 font-mono text-[10px] tracking-[0.11em] text-[#4a5e7a] sm:mb-3 sm:text-[11px] sm:tracking-[0.12em]">ARCHIVE 2024 – 2025</p>
         <h2 className="font-sans text-[clamp(30px,4vw,52px)] font-extrabold tracking-[-0.02em] text-[#f2fdff] leading-[1.1]">Selected Projects</h2>
-      </div>
+      </motion.div>
 
       <div className="grid gap-4 sm:gap-5" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))" }}>
         {projects.map((p, i) => (
-          <div
+          <motion.div
             key={p.num}
-            className="group relative flex flex-col gap-4 overflow-hidden border border-[rgba(154,212,214,0.08)] bg-bg2 px-5 py-6 transition-all duration-300 hover:-translate-y-[6px] hover:border-[rgba(154,212,214,0.18)] hover:shadow-[0_20px_60px_rgba(86,71,135,0.22)] animate-fade-up sm:px-8 sm:py-9"
-            style={{ animationDelay: `${i * 0.1}s` }}
+            {...revealProps(i * 0.07)}
+            whileHover={{ y: -6, transition: { duration: 0.2 } }}
+            className="group relative flex flex-col gap-4 overflow-hidden border border-[rgba(154,212,214,0.08)] bg-bg2 px-5 py-6 transition-all duration-300 hover:border-[rgba(154,212,214,0.18)] hover:shadow-[0_20px_60px_rgba(86,71,135,0.22)] sm:px-8 sm:py-9"
           >
             {/* accent bar */}
             <div className="absolute top-0 left-0 w-[3px] h-full bg-pur scale-y-0 origin-top transition-transform duration-[350ms] group-hover:scale-y-100" />
@@ -125,7 +131,7 @@ export default function Projects() {
                 </a>
               )}
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

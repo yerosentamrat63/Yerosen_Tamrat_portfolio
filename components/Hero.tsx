@@ -1,3 +1,8 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { revealProps } from "@/lib/reveal";
+
 export default function Hero() {
   const gmailComposeUrl = "https://mail.google.com/mail/?view=cm&fs=1&to=yerosentamrat4545@gmail.com";
 
@@ -14,26 +19,26 @@ export default function Hero() {
         style={{ background: "radial-gradient(circle,rgba(154,212,214,.07) 0%,transparent 70%)" }} />
 
       {/* LEFT */}
-      <div>
+      <motion.div {...revealProps()}>
         {/* badge */}
-        <div className="mb-[22px] inline-flex items-center gap-2 border border-[rgba(154,212,214,0.18)] bg-[rgba(154,212,214,0.07)] px-3 py-[6px] animate-fade-up sm:mb-[26px] sm:px-[14px]">
+        <div className="mb-[22px] inline-flex items-center gap-2 border border-[rgba(154,212,214,0.18)] bg-[rgba(154,212,214,0.07)] px-3 py-[6px] sm:mb-[26px] sm:px-[14px]">
           <span className="w-[7px] h-[7px] rounded-full bg-accent animate-pulse-dot" />
           <span className="font-mono text-[9px] text-accent tracking-[0.12em] uppercase sm:text-[10px] sm:tracking-[0.14em]">A2SV Member · Open to Opportunities</span>
         </div>
 
-        <p className="mb-4 flex items-center gap-[10px] font-mono text-[10px] uppercase tracking-[0.14em] text-[#dbcbd8] animate-fade-up delay-100 before:h-px before:w-6 before:bg-[#dbcbd8] before:opacity-50 before:content-[''] sm:mb-[18px] sm:text-[11px] sm:tracking-[0.18em] sm:before:w-7">
+        <p className="mb-4 flex items-center gap-[10px] font-mono text-[10px] uppercase tracking-[0.14em] text-[#dbcbd8] before:h-px before:w-6 before:bg-[#dbcbd8] before:opacity-50 before:content-[''] sm:mb-[18px] sm:text-[11px] sm:tracking-[0.18em] sm:before:w-7">
           Frontend Developer &amp; CS Student
         </p>
 
-        <h1 className="mb-5 font-sans text-[clamp(34px,9vw,76px)] font-extrabold leading-[1.05] tracking-[-0.02em] text-[#f2fdff] animate-fade-up delay-200 sm:mb-[26px]">
+        <h1 className="mb-5 font-sans text-[clamp(34px,9vw,76px)] font-extrabold leading-[1.05] tracking-[-0.02em] text-[#f2fdff] sm:mb-[26px]">
           Solving<br />Problems.<br /><span className="text-accent">Shipping Code.</span>
         </h1>
 
-        <p className="mb-8 max-w-[500px] font-mono text-[12px] leading-[1.8] text-[#4a5e7a] animate-fade-up delay-300 sm:mb-10 sm:text-[13px]">
+        <p className="mb-8 max-w-[500px] font-mono text-[12px] leading-[1.8] text-[#4a5e7a] sm:mb-10 sm:text-[13px]">
           CS student and A2SV member building clean, fast web experiences. Obsessed with DSA, UI detail, and writing code that just works.           200+ LeetCode problems solved.
         </p>
 
-        <div className="flex flex-wrap gap-3 animate-fade-up delay-400 sm:gap-[14px]">
+        <div className="flex flex-wrap gap-3 sm:gap-[14px]">
           <a href="#projects" className="inline-flex w-full items-center justify-center gap-[10px] bg-accent px-6 py-[13px] font-mono text-[10px] font-bold uppercase tracking-[0.1em] text-bg2 no-underline transition-all duration-200 hover:bg-accent2 hover:-translate-y-[3px] hover:shadow-[0_12px_32px_rgba(154,212,214,0.2)] sm:w-auto sm:px-7 sm:py-[14px] sm:text-[11px]">
             VIEW MY WORK ↓
           </a>
@@ -41,10 +46,10 @@ export default function Hero() {
             GET IN TOUCH
           </a>
         </div>
-      </div>
+      </motion.div>
 
       {/* RIGHT – code card */}
-      <div className="w-full animate-slide-r">
+      <motion.div className="w-full" {...revealProps(0.12)}>
         <div className="mx-auto w-full max-w-[760px] border border-[rgba(154,212,214,0.08)] bg-bg2 font-mono text-[12px] leading-[1.8] shadow-[0_0_80px_rgba(86,71,135,0.18)] sm:text-[13px] sm:leading-[1.9]">
           {/* header */}
           <div className="flex items-center gap-2 border-b border-[rgba(154,212,214,0.08)] bg-bg3 px-4 py-3 sm:px-[18px]">
@@ -86,7 +91,7 @@ export default function Hero() {
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
