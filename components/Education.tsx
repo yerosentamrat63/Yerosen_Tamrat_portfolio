@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import { revealProps } from "@/lib/reveal";
+import SplitText from "@/components/ui/SplitText";
+import BlurText from "@/components/ui/BlurText";
 
 const certs = [
   { num: "01", name: "Advanced CSS and Sass: Flexbox, Grid and Animations", provider: "Udemy",            done: true  },
@@ -18,8 +20,8 @@ export default function Education() {
 
       {/* Education */}
       <motion.div {...revealProps()}>
-        <p className="sc mb-2 font-mono text-[10px] tracking-[0.11em] text-[#4a5e7a] sm:mb-3 sm:text-[11px] sm:tracking-[0.12em]">ACADEMIC BACKGROUND</p>
-        <h2 className="mb-7 font-sans text-[clamp(30px,4vw,52px)] font-extrabold leading-[1.1] tracking-[-0.02em] text-[#f2fdff] sm:mb-8">Education</h2>
+        <p className="sc mb-2 font-mono text-[10px] tracking-[0.11em] text-[#4a5e7a] sm:mb-3 sm:text-[11px] sm:tracking-[0.12em]"><BlurText text="ACADEMIC BACKGROUND" delay={50} animateBy="words" direction="top" /></p>
+        <h2 className="mb-7 font-sans text-[clamp(30px,4vw,52px)] font-extrabold leading-[1.1] tracking-[-0.02em] text-[#f2fdff] sm:mb-8"><SplitText text="Education" delay={50} duration={0.6} ease="power3.out" splitType="chars" from={{ opacity: 0, y: 40 }} to={{ opacity: 1, y: 0 }} threshold={0.1} rootMargin="-100px" /></h2>
 
         <div className="flex flex-col gap-5">
           <div className="border border-[rgba(154,212,214,0.08)] bg-bg2 p-5 transition-all duration-250 hover:border-[rgba(154,212,214,0.18)] hover:shadow-[0_8px_40px_rgba(86,71,135,0.15)] sm:p-9">
@@ -64,8 +66,8 @@ export default function Education() {
 
       {/* Certs */}
       <motion.div {...revealProps(0.1)}>
-        <p className="sc mb-2 font-mono text-[10px] tracking-[0.11em] text-[#4a5e7a] sm:mb-3 sm:text-[11px] sm:tracking-[0.12em]">SELF-DIRECTED LEARNING</p>
-        <h2 className="mb-7 font-sans text-[clamp(30px,4vw,52px)] font-extrabold leading-[1.1] tracking-[-0.02em] text-[#f2fdff] sm:mb-8">Certificates</h2>
+        <p className="sc mb-2 font-mono text-[10px] tracking-[0.11em] text-[#4a5e7a] sm:mb-3 sm:text-[11px] sm:tracking-[0.12em]"><BlurText text="SELF-DIRECTED LEARNING" delay={50} animateBy="words" direction="top" /></p>
+        <h2 className="mb-7 font-sans text-[clamp(30px,4vw,52px)] font-extrabold leading-[1.1] tracking-[-0.02em] text-[#f2fdff] sm:mb-8"><SplitText text="Certificates" delay={50} duration={0.6} ease="power3.out" splitType="chars" from={{ opacity: 0, y: 40 }} to={{ opacity: 1, y: 0 }} threshold={0.1} rootMargin="-100px" /></h2>
 
         <div className="flex flex-col gap-[14px]">
           {certs.map((c, i) => (
@@ -77,8 +79,8 @@ export default function Education() {
             >
               <span className="font-mono text-[11px] text-[#7060b0] flex-shrink-0 mt-[2px]">{c.num}</span>
               <div className="flex-1">
-                <div className="mb-1 font-sans text-[13px] font-bold text-[#f2fdff] sm:text-[14px]">{c.name}</div>
-                <div className="font-mono text-[10px] text-[#4a5e7a] tracking-[0.08em] uppercase">{c.provider}</div>
+                <div className="mb-1 font-sans text-[13px] font-bold text-[#f2fdff] sm:text-[14px]"><BlurText text={c.name} delay={50} animateBy="words" direction="top" /></div>
+                <div className="font-mono text-[10px] text-[#4a5e7a] tracking-[0.08em] uppercase"><BlurText text={c.provider} delay={50} animateBy="words" direction="top" /></div>
               </div>
               <span className={`font-mono text-[9px] px-[9px] py-1 border tracking-[0.08em] uppercase flex-shrink-0 mt-[2px] ${c.done ? "border-[rgba(86,71,135,0.5)] text-[#dbcbd8] bg-[rgba(86,71,135,0.12)]" : "border-[rgba(154,212,214,0.4)] text-accent bg-[rgba(154,212,214,0.07)]"}`}>
                 {c.done ? "Completed" : "Ongoing"}

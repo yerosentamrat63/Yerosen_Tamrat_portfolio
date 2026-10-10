@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import { revealProps } from "@/lib/reveal";
+import SplitText from "@/components/ui/SplitText";
+import BlurText from "@/components/ui/BlurText";
 
 const projects = [
   {
@@ -52,14 +54,15 @@ export default function Projects() {
       <div className="grid-bg" />
 
       <motion.div {...revealProps()} className="mb-10 sm:mb-[52px]">
-        <p className="sc mb-2 font-mono text-[10px] tracking-[0.11em] text-[#4a5e7a] sm:mb-3 sm:text-[11px] sm:tracking-[0.12em]">ARCHIVE 2024 – 2025</p>
-        <h2 className="font-sans text-[clamp(30px,4vw,52px)] font-extrabold tracking-[-0.02em] text-[#f2fdff] leading-[1.1]">Selected Projects</h2>
+        <p className="sc mb-2 font-mono text-[10px] tracking-[0.11em] text-[#4a5e7a] sm:mb-3 sm:text-[11px] sm:tracking-[0.12em]"><BlurText text="ARCHIVE 2024 – 2025" delay={50} animateBy="words" direction="top" /></p>
+        <h2 className="font-sans text-[clamp(30px,4vw,52px)] font-extrabold tracking-[-0.02em] text-[#f2fdff] leading-[1.1]"><SplitText text="Selected Projects" delay={50} duration={0.6} ease="power3.out" splitType="chars" from={{ opacity: 0, y: 40 }} to={{ opacity: 1, y: 0 }} threshold={0.1} rootMargin="-100px" /></h2>
       </motion.div>
 
       <div className="grid gap-4 sm:gap-5" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))" }}>
         {projects.map((p, i) => (
           <motion.div
             key={p.num}
+            data-cursor="view"
             {...revealProps(i * 0.07)}
             whileHover={{ y: -6, transition: { duration: 0.2 } }}
             className="group relative flex flex-col gap-4 overflow-hidden border border-[rgba(154,212,214,0.08)] bg-bg2 px-5 py-6 transition-all duration-300 hover:border-[rgba(154,212,214,0.18)] hover:shadow-[0_20px_60px_rgba(86,71,135,0.22)] sm:px-8 sm:py-9"
@@ -71,7 +74,7 @@ export default function Projects() {
 
             <div className="flex flex-col gap-2">
               <div className="flex items-start justify-between gap-3 flex-wrap">
-                <h3 className="font-sans text-[22px] font-extrabold leading-tight tracking-[-0.02em] text-[#f2fdff] sm:text-[26px]">{p.name}</h3>
+                <h3 className="font-sans text-[22px] font-extrabold leading-tight tracking-[-0.02em] text-[#f2fdff] sm:text-[26px]"><SplitText text={p.name} delay={50} duration={0.6} ease="power3.out" splitType="chars" from={{ opacity: 0, y: 40 }} to={{ opacity: 1, y: 0 }} threshold={0.1} rootMargin="-100px" /></h3>
                 {"highlight" in p && p.highlight && (
                   <span className="inline-flex items-center gap-[6px] px-[10px] py-[5px] border border-[rgba(112,96,176,0.45)] bg-[rgba(86,71,135,0.18)] font-mono text-[9px] text-[#dbcbd8] tracking-[0.12em] uppercase whitespace-nowrap">
                     <span className="text-[#7060b0] text-[8px]">◆</span>
@@ -87,10 +90,10 @@ export default function Projects() {
               </div>
             </div>
 
-            <p className="font-mono text-[12px] leading-[1.75] text-[#4a5e7a] sm:text-[13px] sm:leading-[1.8]">{p.desc}</p>
+            <p className="font-mono text-[12px] leading-[1.75] text-[#4a5e7a] sm:text-[13px] sm:leading-[1.8]"><BlurText text={p.desc} delay={50} animateBy="words" direction="top" /></p>
 
             <div className="border-l-2 border-[rgba(219,203,216,0.4)] bg-[rgba(219,203,216,0.06)] px-3 py-[10px] font-mono text-[10px] leading-[1.6] text-[#dbcbd8] sm:px-[14px] sm:text-[11px] sm:leading-[1.65]">
-              {p.role}
+              <BlurText text={p.role} delay={50} animateBy="words" direction="top" />
             </div>
 
             <div className="flex flex-wrap gap-2 mt-1">
