@@ -47,8 +47,8 @@ export default function Skills() {
       {/* header */}
       <motion.div {...revealProps()} className="mb-10 flex flex-wrap items-end justify-between gap-6 sm:mb-[52px] sm:gap-7">
         <div>
-          <p className="sc mb-2 font-mono text-[10px] tracking-[0.11em] text-[#4a5e7a] sm:mb-3 sm:text-[11px] sm:tracking-[0.12em]"><BlurText text="TECHNICAL ARSENAL" delay={50} animateBy="words" direction="top" /></p>
-          <h2 className="font-sans text-[clamp(30px,4vw,52px)] font-extrabold tracking-[-0.02em] text-[#f2fdff] leading-[1.1]"><SplitText text="Skills & Tools" delay={50} duration={0.6} ease="power3.out" splitType="chars" from={{ opacity: 0, y: 40 }} to={{ opacity: 1, y: 0 }} threshold={0.1} rootMargin="-100px" /></h2>
+          <p className="sc mb-2 font-mono text-[10px] tracking-[0.11em] text-[#4a5e7a] sm:mb-3 sm:text-[11px] sm:tracking-[0.12em]"><BlurText text="TECHNICAL ARSENAL" delay={20} animateBy="words" direction="top" /></p>
+          <h2 className="font-sans text-[clamp(30px,4vw,52px)] font-extrabold tracking-[-0.02em] text-[#f2fdff] leading-[1.1]"><SplitText text="Skills & Tools" delay={20} duration={0.42} ease="power3.out" splitType="chars" from={{ opacity: 0, y: 40 }} to={{ opacity: 1, y: 0 }} threshold={0.1} rootMargin="-100px" /></h2>
         </div>
         <div className="flex flex-wrap border border-[rgba(154,212,214,0.08)]">
           {tabs.map(t => (

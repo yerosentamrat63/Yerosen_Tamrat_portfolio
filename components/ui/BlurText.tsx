@@ -44,8 +44,8 @@ export default function BlurText({
         initial={reduceMotion ? false : { opacity: 0, filter: "blur(8px)", ...offset }}
         animate={inView || reduceMotion ? { opacity: 1, filter: "blur(0px)", x: 0, y: 0 } : { opacity: 0, filter: "blur(8px)", ...offset }}
         transition={{
-          duration: reduceMotion ? 0 : 0.5,
-          delay: reduceMotion ? 0 : delay / 1000 + currentIndex * (animateBy === "words" ? 0.035 : 0.018),
+          duration: reduceMotion ? 0 : 0.38,
+          delay: reduceMotion ? 0 : delay / 1000 + currentIndex * (animateBy === "words" ? 0.022 : 0.012),
           ease: "easeOut",
         }}
         onAnimationComplete={isLast ? onAnimationComplete : undefined}

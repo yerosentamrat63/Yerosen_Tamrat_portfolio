@@ -25,28 +25,28 @@ export default function Hero() {
         {/* badge */}
         <div className="mb-[22px] inline-flex items-center gap-2 border border-[rgba(154,212,214,0.18)] bg-[rgba(154,212,214,0.07)] px-3 py-[6px] sm:mb-[26px] sm:px-[14px]">
           <span className="w-[7px] h-[7px] rounded-full bg-accent animate-pulse-dot" />
-          <span className="font-mono text-[9px] text-accent tracking-[0.12em] uppercase sm:text-[10px] sm:tracking-[0.14em]"><BlurText text="A2SV Member · Open to Opportunities" delay={50} animateBy="words" direction="top" /></span>
+          <span className="font-mono text-[9px] text-accent tracking-[0.12em] uppercase sm:text-[10px] sm:tracking-[0.14em]"><BlurText text="A2SV Member · Open to Opportunities" delay={20} animateBy="words" direction="top" /></span>
         </div>
 
         <p className="mb-4 flex items-center gap-[10px] font-mono text-[10px] uppercase tracking-[0.14em] text-[#dbcbd8] before:h-px before:w-6 before:bg-[#dbcbd8] before:opacity-50 before:content-[''] sm:mb-[18px] sm:text-[11px] sm:tracking-[0.18em] sm:before:w-7">
-          <BlurText text="Frontend Developer & CS Student" delay={50} animateBy="words" direction="top" />
+          <BlurText text="Frontend Developer & CS Student" delay={20} animateBy="words" direction="top" />
         </p>
 
         <h1 className="mb-5 font-sans text-[clamp(34px,9vw,76px)] font-extrabold leading-[1.05] tracking-[-0.02em] text-[#f2fdff] sm:mb-[26px]">
-          <SplitText text={"Solving\nProblems."} className="block" delay={50} duration={0.6} ease="power3.out" splitType="chars" from={{ opacity: 0, y: 40 }} to={{ opacity: 1, y: 0 }} threshold={0.1} rootMargin="-100px" textAlign="left" />
-          <SplitText text="Shipping Code." className="block text-accent" delay={50} duration={0.6} ease="power3.out" splitType="chars" from={{ opacity: 0, y: 40 }} to={{ opacity: 1, y: 0 }} threshold={0.1} rootMargin="-100px" />
+          <SplitText text={"Solving\nProblems."} className="block" delay={20} duration={0.42} ease="power3.out" splitType="chars" from={{ opacity: 0, y: 40 }} to={{ opacity: 1, y: 0 }} threshold={0.1} rootMargin="-100px" textAlign="left" />
+          <SplitText text="Shipping Code." className="block text-accent" delay={20} duration={0.42} ease="power3.out" splitType="chars" from={{ opacity: 0, y: 40 }} to={{ opacity: 1, y: 0 }} threshold={0.1} rootMargin="-100px" />
         </h1>
 
         <p className="mb-8 max-w-[500px] font-mono text-[12px] leading-[1.8] text-[#4a5e7a] sm:mb-10 sm:text-[13px]">
-          <BlurText text="CS student and A2SV member building clean, fast web experiences. Obsessed with DSA, UI detail, and writing code that just works. 200+ LeetCode problems solved." delay={50} animateBy="words" direction="top" />
+          <BlurText text="CS student and A2SV member building clean, fast web experiences. Obsessed with DSA, UI detail, and writing code that just works. 200+ LeetCode problems solved." delay={20} animateBy="words" direction="top" />
         </p>
 
         <div className="flex flex-wrap gap-3 sm:gap-[14px]">
           <a href="#projects" className="inline-flex w-full items-center justify-center gap-[10px] bg-accent px-6 py-[13px] font-mono text-[10px] font-bold uppercase tracking-[0.1em] text-bg2 no-underline transition-all duration-200 hover:bg-accent2 hover:-translate-y-[3px] hover:shadow-[0_12px_32px_rgba(154,212,214,0.2)] sm:w-auto sm:px-7 sm:py-[14px] sm:text-[11px]">
-            <BlurText text="VIEW MY WORK ↓" delay={50} animateBy="words" direction="top" />
+            <BlurText text="VIEW MY WORK ↓" delay={20} animateBy="words" direction="top" />
           </a>
           <a href={gmailComposeUrl} target="_blank" rel="noopener noreferrer" className="inline-flex w-full items-center justify-center gap-[10px] border border-[rgba(154,212,214,0.18)] bg-transparent px-6 py-[13px] font-mono text-[10px] font-medium uppercase tracking-[0.1em] text-[#f2fdff] no-underline transition-all duration-200 hover:border-[#7060b0] hover:text-[#dbcbd8] hover:-translate-y-[3px] sm:w-auto sm:px-7 sm:py-[14px] sm:text-[11px]">
-            <BlurText text="GET IN TOUCH" delay={50} animateBy="words" direction="top" />
+            <BlurText text="GET IN TOUCH" delay={20} animateBy="words" direction="top" />
           </a>
         </div>
       </motion.div>

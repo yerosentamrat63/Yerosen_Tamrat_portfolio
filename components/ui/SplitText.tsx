@@ -56,7 +56,7 @@ export default function SplitText({
       animate={inView || reduceMotion ? to : from}
       transition={{
         duration: reduceMotion ? 0 : duration,
-        delay: reduceMotion ? 0 : segmentDelay + index * (splitType === "chars" ? 0.018 : 0.055),
+        delay: reduceMotion ? 0 : segmentDelay + index * (splitType === "chars" ? 0.012 : 0.035),
         ease: easings[ease],
       }}
       onAnimationComplete={isLast ? onLetterAnimationComplete : undefined}
