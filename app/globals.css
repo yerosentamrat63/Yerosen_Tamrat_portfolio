@@ -7,14 +7,16 @@
   --font-jetbrains: 'JetBrains Mono', monospace;
 }
 
-* { cursor: none !important; }
+@media (hover: hover) and (pointer: fine) {
+  * { cursor: none !important; }
+}
 
 html { scroll-behavior: smooth; }
 
 section[id] { scroll-margin-top: 92px; }
 
-@media (hover: none), (pointer: coarse) {
-  * { cursor: auto !important; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
 }
 
 body {
@@ -34,6 +36,11 @@ body::after {
     0deg, transparent, transparent 2px,
     rgba(0,0,0,0.018) 2px, rgba(0,0,0,0.018) 4px
   );
+}
+
+/* skip the full-screen overlay on phones: it forces an extra full-frame composite */
+@media (max-width: 767px), (pointer: coarse) {
+  body::after { display: none; }
 }
 
 /* grid bg */
@@ -61,12 +68,12 @@ body::after {
   50%       { opacity: 0; }
 }
 @keyframes pulseDot {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(154,212,214,0.55); }
-  50%       { box-shadow: 0 0 0 6px rgba(154,212,214,0); }
+  from { transform: scale(1); opacity: 0.6; }
+  to   { transform: scale(2.8); opacity: 0; }
 }
 @keyframes ticker {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
 }
 @keyframes fadeIn {
   from { opacity: 0; }
@@ -76,9 +83,25 @@ body::after {
 .animate-fade-up   { animation: fadeUp 0.6s both; }
 .animate-slide-r   { animation: slideR 0.7s 0.2s both; }
 .animate-blink     { animation: blinkCursor 1s step-end infinite; }
-.animate-pulse-dot { animation: pulseDot 2s ease-in-out infinite; }
-.animate-ticker    { animation: ticker 26s linear infinite; }
+/* pulse rendered with a scaled pseudo-ring so only transform/opacity animate */
+.animate-pulse-dot { position: relative; }
+.animate-pulse-dot::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: rgba(154,212,214,0.55);
+  pointer-events: none;
+  animation: pulseDot 2s ease-out infinite;
+}
+.animate-ticker    { animation: ticker 26s linear infinite; will-change: transform; }
 .animate-fade-in   { animation: fadeIn 0.5s both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-blink,
+  .animate-pulse-dot::after,
+  .animate-ticker { animation: none; }
+}
 
 .delay-100 { animation-delay: 0.1s; }
 .delay-200 { animation-delay: 0.2s; }

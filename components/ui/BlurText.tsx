@@ -41,8 +41,8 @@ export default function BlurText({
     return (
       <motion.span
         key={`segment-${index}`}
-        initial={reduceMotion ? false : { opacity: 0, filter: "blur(8px)", ...offset }}
-        animate={inView || reduceMotion ? { opacity: 1, filter: "blur(0px)", x: 0, y: 0 } : { opacity: 0, filter: "blur(8px)", ...offset }}
+        initial={reduceMotion ? false : { opacity: 0, ...offset }}
+        animate={inView || reduceMotion ? { opacity: 1, x: 0, y: 0 } : { opacity: 0, ...offset }}
         transition={{
           duration: reduceMotion ? 0 : 0.38,
           delay: reduceMotion ? 0 : delay / 1000 + currentIndex * (animateBy === "words" ? 0.022 : 0.012),
